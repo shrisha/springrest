@@ -1,0 +1,16 @@
+<table class="table table-bordered" ng-show="results.length > 0">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="c in results">
+        <td>{{c.id}}</td>
+        <td>{{c.description}}</td>
+        <td>{{c.rating}}</td>
+    </tr>
+    </tbody>
+</table>
