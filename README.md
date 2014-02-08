@@ -4,10 +4,13 @@ springrest
 # Spring REST Component for Challenge team
 * Simple <a href="http://projects.spring.io/spring-boot/">Spring Boot</a> application with <a href="http://www.mongodb.org/">MongoDB</a>.
 
-# Setup info
+# Heroku Setup info
+
+A one time config change was made to enable MongoDB and the Spring config activation:
 
 ```
-heroku config:set JAVA_OPTS='-Xmx384m -Xss512k -XX:+UseCompressedOops -Dspring.profiles.active="heroku"'
+heroku addons:add mongohq
+heroku config:set JAVA_OPTS='-Xmx384m -Xss512k -XX:+UseCompressedOops -Dspring.profiles.active=heroku'
 ```
 
 # Getting started
