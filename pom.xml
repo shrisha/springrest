@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>org.challenge</groupId>
 	<artifactId>challenge-rest</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
