@@ -16,12 +16,12 @@ app.config(['$routeProvider',function($routeProvider){
 		.when("/",
 			{
 				controller: "ChallengeController",
-				templateUrl: "partials/challenge.html"
+				templateUrl: "partials/challenges.html"
 			})
-        .when("/x",
+        .when("/createChallenge",
         {
-            controller: "ChallengeController",
-            templateUrl: "partials/challenge.html"
+            controller: "CreateChallengeController",
+            templateUrl: "partials/createChallenge.html"
         })
 		.when("/search/:zipcode/:place",
 			{

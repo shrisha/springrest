@@ -1,0 +1,18 @@
+<div id="createChallenge">
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Enter details for your challenge</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-inline" name="challengeForm" novalidate>
+                <input type="text" name="description" placeholder="Enter description" required ng-model="description">
+                <input type="submit" class="btn btn-primary" value="GO" ng-disabled="challengeForm.$invalid" ng-click="createChallenge(description)">
+            </form>
+        </div>
+        <div class="modal-footer">
+            <p class="text-left text-success" ng-show="!challengeForm.$invalid" ng-cloak>Challenge is valid</p>
+        </div>
+    </div>
+    <div class="modal-backdrop light fade in"></div>
+</div>
+~

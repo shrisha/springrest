@@ -9,7 +9,18 @@ angular.module( "app.controllers", [ ] )
                 $scope.results = challenges;
             });
         };
-        console.log("here");
-        $scope.fetchChallenges();
 
-} );
+        console.log("feching challenges");
+        $scope.fetchChallenges();
+    })
+    .controller( "CreateChallengeController", function( $scope, $location, $routeParams, $http) {
+
+        $scope.createChallenge = function(description) {
+            $http.post('challenge').success(function(id){
+                console.log("id="+id);
+            });
+        };
+        console.log("create challenges");
+//        $scope.fetchChallenges();
+    })
+;
