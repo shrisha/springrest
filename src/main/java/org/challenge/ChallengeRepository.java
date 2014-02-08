@@ -6,6 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface ChallengeRepository extends MongoRepository<Challenge, String> {
 
-	public List<Challenge> findByQuestion(String question);
+	public List<Challenge> findByDescription(String description);
 
 }

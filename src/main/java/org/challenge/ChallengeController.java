@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/challenge")
 public class ChallengeController {
 
 	@Autowired
@@ -35,12 +35,16 @@ public class ChallengeController {
 		return challenge.getId();
 	}
 	
-	@RequestMapping(value="/init", method= RequestMethod.GET)
-	public @ResponseBody Challenge init() {
-		Challenge challenge = new Challenge("Is Yahoo! a media company?", "Yes");
+	@RequestMapping(method = RequestMethod.PUT)
+	public @ResponseBody Challenge update(@RequestBody Challenge challenge) {
 		challenge = this.challengeRepository.save(challenge);
 		return challenge;
 	}
 	
-
+	@RequestMapping(value="/init", method= RequestMethod.GET)
+	public @ResponseBody Challenge init() {
+		Challenge challenge = new Challenge("Drink 3 Large Coffees in 5 Minutes");
+		challenge = this.challengeRepository.save(challenge);
+		return challenge;
+	}
 }

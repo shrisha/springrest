@@ -7,16 +7,15 @@ public class Challenge {
 	@Id
 	private String id;
 
-	private String question;
-	private String answer;
+	private String description;
+	private int rating;
 
 	public Challenge() {
 	}
-
 	
-	public Challenge(String question, String answer) {
-		this.question = question;
-		this.answer = answer;
+	public Challenge(String description) {
+		super();
+		this.description = description;
 	}
 
 	public String getId() {
@@ -27,21 +26,20 @@ public class Challenge {
 		this.id = id;
 	}
 
-	public String getQuestion() {
-		return question;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setQuestion(String question) {
-		this.question = question;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getAnswer() {
-		return answer;
+	public int getRating() {
+		return rating;
 	}
 
-	public void setAnswer(String answer) {
-		this.answer = answer;
+	public void setRating(int rating) {
+		this.rating = rating;
 	}
-
 	
 }
