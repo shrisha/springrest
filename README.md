@@ -18,15 +18,22 @@ git push heroku master
 heroku ps:scale web=1
 ```
 #Usage
+
 ## Web
+
 * http://hbpchallenge.herokuapp.com/
+ 
 ## API
+
 ### Challenges (http://hbpchallenge.herokuapp.com/challenge)
+
 * GET /  (list all)
 * GET /{id} (find by id)
 * POST /  (new)
 * PUT /  (update)
+
 ### Acceptances (http://hbpchallenge.herokuapp.com/acceptance)
+
 * GET /  (list all)
 * GET /{id} (find by id)
 * POST /  (new)
