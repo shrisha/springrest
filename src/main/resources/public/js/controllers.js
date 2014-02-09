@@ -16,10 +16,15 @@ angular.module( "app.controllers", [ ] )
     .controller( "CreateChallengeController", function( $scope, $location, $routeParams, $http) {
 
         $scope.createChallenge = function(description) {
-            $http.post('challenge').success(function(id){
+            $http.post('challenge',{'description':description}).success(function(id){
                 console.log("id="+id);
             });
         };
+
+        $scope.cancel = function(){
+//            $modalInstance.dismiss('cancel');
+
+        }
         console.log("create challenges");
 //        $scope.fetchChallenges();
     })
