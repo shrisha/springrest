@@ -44,6 +44,17 @@ heroku ps:scale web=1
 * GET /  (list all)
 * GET /{id} (find by id)
 * POST /  (new)
+
+```
+POST /challenge HTTP/1.1
+Host: hbpchallenge.herokuapp.com
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: dd751e3b-c7bb-32ae-9bc6-5a770fd82bef
+
+{ "description": "This is a challenge from Postman", "rating": 5 }
+```
+
 * PUT /  (update)
 
 ### Acceptances (http://hbpchallenge.herokuapp.com/acceptance)
