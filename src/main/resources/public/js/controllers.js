@@ -75,23 +75,25 @@ angular.module( "app.controllers", [ ] )
                 bounds: {},
                 markers: [
                     {
+                        icon: 'images/marker-blue.png',
                         latitude: 45,
                         longitude: -74,
                         showWindow: false,
                         title: 'Marker 2'
                     },
                     {
+                        icon: 'images/marker-blue.png',
                         latitude: 15,
                         longitude: 30,
                         showWindow: false,
                         title: 'Marker 2'
                     },
                     {
-                        icon: 'plane.png',
+                        icon: 'images/marker-blue.png',
                         latitude: 37,
                         longitude: -122,
                         showWindow: false,
-                        title: 'Plane'
+                        title: 'Marker 3'
                     }
                 ],
                 events: {
