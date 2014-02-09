@@ -8,7 +8,8 @@ var app = angular.module("app",[
 	"app.controllers",
 	"app.filters",
 	"app.directives",
-	"ui.bootstrap"
+	"ui.bootstrap",
+	"google-maps"
 ]);
 
 app.config(['$routeProvider',function($routeProvider){
@@ -23,6 +24,11 @@ app.config(['$routeProvider',function($routeProvider){
             controller: "CreateChallengeController",
             templateUrl: "partials/createChallenge.html"
         })
+        .when("/map",
+        {
+            controller: "MapController",
+            templateUrl: "partials/map.html"
+        })        
 		.when("/search/:zipcode/:place",
 			{
 				controller: "SearchCtrl",
