@@ -2,7 +2,7 @@
 "use strict";
 
 angular.module( "app.controllers", [ ] )
-    .controller( "ChallengeController", function( $scope, $location, $routeParams, $http, $modal) {
+    .controller( "ChallengeController", function( $scope, $location, $routeParams, $http, $modal, $route) {
 
         $scope.fetchChallenges = function() {
             $http.get('challenge').success(function(challenges){
@@ -23,8 +23,8 @@ angular.module( "app.controllers", [ ] )
             });
             console.log('modal opened');
             modalInstance.result.then(function (response) {
-//                $scope.selected = response;
                 console.log(response);
+                $route.reload();
             }, function () {
                 console.log('Modal dismissed at: ' + new Date());
             });
