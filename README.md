@@ -62,6 +62,17 @@ Postman-Token: dd751e3b-c7bb-32ae-9bc6-5a770fd82bef
 * GET /  (list all)
 * GET /{id} (find by id)
 * POST /  (new)
+
+```
+POST /acceptance/ HTTP/1.1
+Host: hbpchallenge.herokuapp.com
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: bd77d3b9-0ec6-1d75-7cc5-ff6a24e495a0
+
+{ "challengeId": "52f6923c036480de4032a56e", "contentUrl": null, "contentType": null, "notes": "my notes", "location": null, "rating": 0 }
+```
+
 * PUT /  (update)
 
 
