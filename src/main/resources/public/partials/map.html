@@ -1,0 +1,13 @@
+<google-map center="map.center" zoom="map.zoom">
+
+<markers models="map.Markers" coords="'self'" icon="'icon'" click="'onClicked'" >
+<marker ng-repeat="m in map.markers" coords="m" icon="m.icon" click="onMarkerClicked(m)">
+    <marker-label content="m.title" anchor="22 0" class="marker-labels"/>
+    <window show="m.showWindow" closeClick="m.closeClick()">
+        <p>This is an info window at {{ m.latitude | number:4 }}, {{ m.longitude | number:4 }}!</p>
+
+        <p class="muted">Challenge Accepted!</p>
+    </window>
+</marker>
+</markers>
+</google-map>
